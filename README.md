@@ -23,7 +23,7 @@ A simple but complete hex editor written in C for educational purposes.
 ```bash
 # Clone the repository
 git clone https://github.com/bosioF/CeditX.git
-cd CeditX
+cd CeditX/src
 
 # Compile the program
 gcc -o hexedit main.c -Wall -Wextra
