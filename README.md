@@ -14,77 +14,66 @@ A simple but complete hex editor written in C for educational purposes.
 
 ## Requirements
 
-- C compiler (GCC, Clang, MSVC)
-- Operating system: Linux, macOS, Windows
-- Standard C libraries
+To compile and run CeditX you need:
+
+### Linux (Ubuntu/Debian)
+```bash
+sudo apt update
+sudo apt install build-essential make
+````
+
+### macOS
+
+```bash
+xcode-select --install   # Installs gcc/clang and make
+```
+
+(or alternatively install GNU make with Homebrew: `brew install make`)
+
+### Windows
+
+1. Install [MSYS2](https://www.msys2.org/) (recommended) or [MinGW-w64](https://www.mingw-w64.org/).
+2. With MSYS2, open the **MSYS2 MinGW shell** and install the tools:
+
+   ```bash
+   pacman -S mingw-w64-x86_64-gcc make
+   ```
+3. Ensure `gcc` and `make` (or `mingw32-make`) are available in your **PATH**.
+
+---
 
 ## Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/bosioF/CeditX.git
-cd CeditX/src
+cd CeditX
+```
 
-# Compile the program
-gcc -o CeditX main.c -Wall -Wextra
+### Compile with Makefile
 
-# Run
-./CeditX
-````
+A `Makefile` is provided for cross-platform builds.
 
----
+* On Linux/macOS:
 
-## Compilation on Windows
+  ```bash
+  make        # compile
+  make run    # compile and run
+  make clean  # remove build files
+  ```
 
-### Option 1: MinGW (recommended)
+* On Windows (MSYS2/MinGW):
 
-1. Download and install [MinGW-w64](https://www.mingw-w64.org/).
-2. Add `gcc` to your **PATH** during installation.
-3. Open **Command Prompt** or **PowerShell**.
-4. Navigate to the project folder:
+  ```cmd
+  mingw32-make        # compile
+  mingw32-make run    # compile and run
+  mingw32-make clean  # remove build files
+  ```
 
-   ```cmd
-   cd C:\Users\YourName\CeditX\src
-   ```
-5. Compile the program:
+The resulting executable will be:
 
-   ```cmd
-   gcc -o hexedit.exe main.c -Wall -Wextra
-   ```
-6. Run:
-
-   ```cmd
-   hexedit.exe
-   ```
-
-### Option 2: Microsoft Visual Studio (MSVC)
-
-1. Install **Visual Studio Community**.
-2. Select **Desktop development with C++** in the installer.
-3. Open **x64 Native Tools Command Prompt for VS**.
-4. Compile with:
-
-   ```cmd
-   cl main.c
-   ```
-
-   → This will generate `main.exe`.
-
-### Option 3: WSL (Windows Subsystem for Linux)
-
-1. Enable **WSL** and install Ubuntu.
-2. Inside Ubuntu, install GCC:
-
-   ```bash
-   sudo apt update
-   sudo apt install build-essential
-   ```
-3. Compile and run:
-
-   ```bash
-   gcc -o hexedit main.c -Wall -Wextra
-   ./hexedit
-   ```
+* **Linux/macOS** → `./CeditX`
+* **Windows** → `CeditX.exe`
 
 ---
 
@@ -107,7 +96,7 @@ gcc -o CeditX main.c -Wall -Wextra
 
 ```bash
 # Start the program
-./hexedit
+./CeditX
 
 # Load a file
 load myfile.bin
@@ -147,7 +136,8 @@ Offset   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F  ASCII
 
 ### Main files
 
-* `main.c` - Main source code
+* `src/main.c` - Main source code
+* `makefile` - Build automation
 * `README.md` - This documentation
 
 ### Key components
