@@ -29,7 +29,7 @@ cd CeditX/src
 gcc -o CeditX main.c -Wall -Wextra
 
 # Run
-./hexedit
+./CeditX
 ````
 
 ---
