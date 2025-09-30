@@ -171,7 +171,7 @@ void hex_search(HexBuffer *buffer, const char *hex_string); // Search
 
 * [ ] Support for large files (streaming)
 * [ ] Graphical interface with ncurses
-* [ ] Modification history (undo/redo)
+* [ ] Modification history (redo)
 * [ ] Advanced search with regex
 * [ ] Multiple display modes (8/16/32 bit)
 * [ ] Support for different encodings
