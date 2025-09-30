@@ -1,3 +1,8 @@
 CeditX
 test.bin
+text.bin
+test.txt
+test.txt
 src/main.o
+src/hexbuffer.o
+src/menu.o
