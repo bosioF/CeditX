@@ -1,0 +1,10 @@
+{
+  "spec": "CeditX.spec",
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/bosioF/CeditX.git",
+      "branch": "main"
+    }
+  ]
+}
